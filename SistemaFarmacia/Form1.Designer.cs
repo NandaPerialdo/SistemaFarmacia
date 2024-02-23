@@ -48,7 +48,6 @@
             this.label1.Size = new System.Drawing.Size(85, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cadastrarCliente
             // 
