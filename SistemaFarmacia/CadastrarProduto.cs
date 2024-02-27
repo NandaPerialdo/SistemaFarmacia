@@ -12,9 +12,41 @@ namespace SistemaFarmacia
 {
     public partial class CadastrarProduto : Form
     {
+        DAO bd;
         public CadastrarProduto()
         {
             InitializeComponent();
+            bd = new DAO();// conectar com a DAO
         }//fim do metodo construtor
+
+        private void CadastrarProduto_Load(object sender, EventArgs e)
+        {
+
+        }//carregar tela
+
+        private void nomeProduto_TextChanged(object sender, EventArgs e)
+        {
+
+        }//caixa de texto nome do produto
+
+        private void valorProduto_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }//caixa de texto valor do produto
+
+        private void confProduto_Click(object sender, EventArgs e)
+        {
+            int cProduto = Convert.ToInt32(codProduto.Text);
+            string nProduto = nomeProduto.Text;
+            double vProduto = Convert.ToDouble(valorProduto.Text);
+
+            bd.CadProduto(cProduto, nProduto, vProduto);// inserindo no bd
+
+            //limpar dos dados apos inserçao
+
+            codProduto.Text = "";
+            nomeProduto.Text = "";
+            valorProduto.Text = "";
+        }//botao confirmar produto
     }//fim da classe
 }//fim do projeto

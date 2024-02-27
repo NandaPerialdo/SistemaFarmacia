@@ -46,3 +46,15 @@ C:\Users\fernanda.palves3\source\repos\SistemaFarmacia\SistemaFarmacia\bin\Debug
 C:\Users\fernanda.palves3\source\repos\SistemaFarmacia\SistemaFarmacia\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\fernanda.palves3\source\repos\SistemaFarmacia\SistemaFarmacia\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\fernanda.palves3\source\repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.csproj.CopyComplete
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.csproj.AssemblyReference.cache
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.CadastrarCliente.resources
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.CadastrarFarmacia.resources
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.CadastrarProduto.resources
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.Menu.resources
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.Properties.Resources.resources
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.Ranking.resources
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.registrarCompra.resources
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.csproj.GenerateResource.cache
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.csproj.CoreCompileInputs.cache
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.exe
+C:\Users\nanda\Source\Repos\SistemaFarmacia\SistemaFarmacia\obj\Debug\SistemaFarmacia.pdb
