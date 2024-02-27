@@ -33,6 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.confFarmacia = new System.Windows.Forms.Button();
+            this.codFarmacia = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -48,15 +50,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 178);
+            this.textBox1.Location = new System.Drawing.Point(162, 203);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(142, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 185);
+            this.label2.Location = new System.Drawing.Point(60, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 2;
@@ -71,6 +74,24 @@
             this.confFarmacia.TabIndex = 3;
             this.confFarmacia.Text = "Confirmar";
             this.confFarmacia.UseVisualStyleBackColor = false;
+            this.confFarmacia.Click += new System.EventHandler(this.confFarmacia_Click);
+            // 
+            // codFarmacia
+            // 
+            this.codFarmacia.Location = new System.Drawing.Point(162, 177);
+            this.codFarmacia.Name = "codFarmacia";
+            this.codFarmacia.Size = new System.Drawing.Size(100, 20);
+            this.codFarmacia.TabIndex = 5;
+            this.codFarmacia.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.codFarmacia_MaskInputRejected);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(60, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Codigo da Farmacia";
             // 
             // CadastrarFarmacia
             // 
@@ -78,6 +99,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(361, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.codFarmacia);
             this.Controls.Add(this.confFarmacia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
@@ -85,6 +108,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastrarFarmacia";
             this.Text = "Cadastrar Farmacia";
+            this.Load += new System.EventHandler(this.CadastrarFarmacia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,5 +120,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button confFarmacia;
+        private System.Windows.Forms.MaskedTextBox codFarmacia;
+        private System.Windows.Forms.Label label3;
     }
 }

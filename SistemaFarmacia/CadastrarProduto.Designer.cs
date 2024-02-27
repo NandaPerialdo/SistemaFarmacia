@@ -112,6 +112,7 @@
             this.codProduto.Name = "codProduto";
             this.codProduto.Size = new System.Drawing.Size(41, 20);
             this.codProduto.TabIndex = 8;
+            this.codProduto.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.codProduto_MaskInputRejected);
             // 
             // CadastrarProduto
             // 

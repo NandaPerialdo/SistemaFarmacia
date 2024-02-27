@@ -48,5 +48,10 @@ namespace SistemaFarmacia
             nomeProduto.Text = "";
             valorProduto.Text = "";
         }//botao confirmar produto
+
+        private void codProduto_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }//caixa de texto codigo do produto
     }//fim da classe
 }//fim do projeto

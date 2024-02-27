@@ -48,10 +48,53 @@ namespace SistemaFarmacia
             }//fim do try catch
         }//fim do metodo registrar compra
 
-        public void CadProduto(int cod, string nome, )
+        public void CadProduto(int codProduto, string nomeProduto, double valorProduto)
         {
+            dados = "('" + codProduto + "','" + nomeProduto + "','" + valorProduto + ")";
+            sql = "insert into produto (cod, nome, valor) values" + dados;
 
+            try
+            {
+                MySqlCommand conn = new MySqlCommand(sql, conexao);
+                MessageBox.Show(conn.ExecuteNonQuery() + " Dado Inserido!");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Algo deu errado!\n\n" + erro);
+            }//fim do try catch
         }//fim do metodo cadastrar produto
+
+        public void CadFarmacia(int codFarmacia, string nomeFarmacia)
+        {
+            dados = "('" + codFarmacia + "','" + nomeFarmacia + ")";
+            sql = "insert into produto (codFarmacia, nomeFarmacia) values" + dados;
+
+            try
+            {
+                MySqlCommand conn = new MySqlCommand(sql, conexao);
+                MessageBox.Show(conn.ExecuteNonQuery() + " Dado Inserido!");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Algo deu errado!\n\n" + erro);
+            }//fim do try catch
+        }//fim do metodo cadastrar farmacia
+
+        public void CadCliente(int codCliente, string nomeCliente, double rg, int telefone, string planoSaude, string farmPopular)
+        {
+            dados = "('" + codCliente + "','" + nomeCliente + "','" + rg + "','" + telefone + "','" + planoSaude + "','" + farmPopular + ")";
+            sql = "insert into produto (codCliente, nomeCliente, rg, telefone, planoSaude, farmPopular) values" + dados;
+
+            try
+            {
+                MySqlCommand conn = new MySqlCommand(sql, conexao);
+                MessageBox.Show(conn.ExecuteNonQuery() + " Dado Inserido!");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Algo deu errado!\n\n" + erro);
+            }//fim do try catch
+        }//fim do metodo cadastrar cliente
 
     }//fim da classe
 }//fim do projeto
