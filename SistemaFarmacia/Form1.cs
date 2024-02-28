@@ -27,6 +27,8 @@ namespace SistemaFarmacia
         {
             Ranking rank = new Ranking();
             rank.ShowDialog();
+            Ranking con = new Ranking();
+            con.ShowDialog();
         }//fim do botao exibir ranking 
 
         private void cadastrarProduto_Click(object sender, EventArgs e)

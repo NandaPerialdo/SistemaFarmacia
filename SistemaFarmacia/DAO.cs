@@ -14,7 +14,11 @@ namespace SistemaFarmacia
         MySqlConnection conexao;
         public string dados;
         public string sql;
-
+        public int contador;
+        public int[] cCliente;
+        public int[] cProduto;
+        public int[] cFarmacia;
+        int i;
         //metodo contrutor
 
         public DAO()
@@ -95,6 +99,72 @@ namespace SistemaFarmacia
                 MessageBox.Show("Algo deu errado!\n\n" + erro);
             }//fim do try catch
         }//fim do metodo cadastrar cliente
+
+        public int ConsultarTamanhoBD()
+        {
+            return contador;
+        }//fim do selecionar
+
+        public void PreencherVetor()
+        {
+            string query = "select * from compra";//Coletar os dados do BD
+
+            //Instanciar
+            this.cCliente = new int[100];
+            this.cProduto = new int[100];
+            this.cFarmacia = new int[100];
+
+            //Preencher com valores iniciais
+            for (i = 0; i < 100; i++)
+            {
+                cCliente[i] = 0;
+                cProduto[i] = 0;
+                cFarmacia[i] = 0;
+            }//fim do for
+
+            //Criando o comando para consultar no BD
+            MySqlCommand coletar = new MySqlCommand(query, conexao);
+            //Leitura dos dados do banco
+            MySqlDataReader leitura = coletar.ExecuteReader();
+
+            i = 0;
+            contador = 0;
+            while (leitura.Read())
+            {
+                cCliente[i] = Convert.ToInt32(leitura["codigo"]);
+                cProduto[i] = Convert.ToInt32(leitura["nome"]);
+                cFarmacia[i] = Convert.ToInt32(leitura["telefone"]);
+                i++;
+                contador++;
+
+            }//Fim do while
+
+            //Fechar a leitura de dados no banco
+            leitura.Close();
+        }//fim do método preencher
+
+        public int RetornarContagem()
+        {
+            return contador;
+        }//fim do metodo
+
+        public int[] ConsultarCodCliente()
+        {
+            PreencherVetor();
+            return cCliente;
+        }//fim do método
+
+        public int[] ConsultarCodProduto()
+        {
+            PreencherVetor();
+            return cProduto;
+        }//fim do método
+
+        public int[] ConsultarCodFarmacia()
+        {
+            PreencherVetor();
+            return cFarmacia;
+        }//fim do método
 
     }//fim da classe
 }//fim do projeto

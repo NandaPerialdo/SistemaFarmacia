@@ -157,7 +157,7 @@
             // RG
             // 
             this.RG.Location = new System.Drawing.Point(124, 164);
-            this.RG.Mask = "000000000-0";
+            this.RG.Mask = "0000000000";
             this.RG.Name = "RG";
             this.RG.Size = new System.Drawing.Size(55, 20);
             this.RG.TabIndex = 14;
